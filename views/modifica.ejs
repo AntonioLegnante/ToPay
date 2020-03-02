@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToPay</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action = "/modifica"  method="POST">
+            <input type="text" name="pay" value="<%= topay.pay %>">
+            <input type="submit" value="Aggiungi modifica">
+            <input type="hidden" name="id" value="<%= topay.id_Prova %>">
+        </form>  
+    </body>
+    
+</html>

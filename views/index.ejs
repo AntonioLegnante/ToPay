@@ -1,0 +1,37 @@
+<!DOCKTYPE html>
+
+<html>
+    <head>
+        <title> ToPay </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>ToPayApp</h1>
+        <form action="/aggiungi" method="POST">
+        <input type="text" name="pay">
+        <input type="submit" value="Inserisci un elemento nella lista">
+        </form>
+        <ul>
+            <% topays.forEach(function(topay){ %>
+                <li><%= topay.pay %> <%= topay.quantita %> <%= topay.done %> 
+                <form action="/toggle" method="POST">
+                <input type="submit" value="toggle">
+                <input type="hidden" name="id" value="<%= topay.id_Prova %>">
+                </form>
+                <form action="/aggiungiquantita" method="POST">
+                <input type="submit" value = "+">
+                <input type="hidden" name="id" value="<%= topay.id_Prova %>">
+                </form>
+                <form action="/rimuoviquantita" method="POST">
+                <input type="submit" value = "-">
+                <input type="hidden" name ="id" value ="<%= topay.id_Prova %>">
+                </form>
+                <a href="/modifica/<%= topay.id_Prova %>"> modifica </a>
+                </li>
+            <% }); %>
+        </ul>
+        <form action="/elimina" method="POST">
+        <input type="submit" value="&times;">
+        </form>
+    </body>
+</html>

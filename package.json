@@ -1,0 +1,28 @@
+{
+  "name": "ToPay",
+  "version": "1.0.0",
+  "description": "Cose da comprare",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonioLegnante/ToPay.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonioLegnante/ToPay/issues"
+  },
+  "homepage": "https://github.com/AntonioLegnante/ToPay#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "sqlite3": "^4.1.1"
+  }
+}
